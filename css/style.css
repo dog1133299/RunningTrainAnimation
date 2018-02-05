@@ -1,0 +1,136 @@
+@-webkit-keyframes run{
+
+  from{ left: -30%; }
+  to{ left: 130%; }
+}
+
+@keyframes run{
+
+  from{ left: -30%; }
+  to{ left: 130%; }
+}
+
+@-webkit-keyframes jump{
+
+  0%{ top: 50%; }
+  50%{ top: 40%; }
+  100%{ top: 50%; }
+}
+
+@keyframes jump{
+
+  0%{ top: 50%; }
+  50%{ top: 40%; }
+  100%{ top: 50%; }
+}
+
+
+ *{
+  margin: 0 auto;
+  padding: 0;
+ } 
+body{
+  background-color: lightgreen;
+  overflow: hidden;
+}
+
+.train,.car,.carHead{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+}
+.train{
+-webkit-animation: run linear 3s infinite;
+        animation: run linear 3s infinite;
+cursor: pointer;
+}
+.train:hover{
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+.train:active{
+  -webkit-animation: run linear 3s infinite,jump linear 1s ;
+          animation: run linear 3s infinite,jump linear 1s ;
+}
+.car,.carHead{  
+  width: 10vw;
+  height: 8vw;
+  background-color: white; 
+  overflow: hidden;
+}
+.car{ 
+border-radius: 5%;
+}
+.door{
+  width: 2vw;
+  height:4vw;
+  border: 0.3vw solid rgb(180,180,180);
+  border-radius: 5%;
+  -webkit-transform: translate(0,2vw);
+      -ms-transform: translate(0,2vw);
+          transform: translate(0,2vw);
+}
+.orange{
+  width: 10vw;
+  height: 2vw;
+  background-color:  orange;
+  -webkit-transform: translate(0,5vw);
+      -ms-transform: translate(0,5vw);
+          transform: translate(0,5vw);
+
+}
+.window1,.window2{
+  width: 2vw;
+  height: 2vw;
+  border: 0.2vw solid lightgrey;
+  border-radius: 10%;
+
+
+}
+.window1{
+  -webkit-transform: translate(-3vw,-5vw);
+      -ms-transform: translate(-3vw,-5vw);
+          transform: translate(-3vw,-5vw);
+}
+.window2{
+  -webkit-transform: translate(3vw,-7.4vw);
+      -ms-transform: translate(3vw,-7.4vw);
+          transform: translate(3vw,-7.4vw);
+}
+.carHead{  
+  left: -22vw;
+  border-radius: 80% 10% 10% 15% ;
+  background-color: white; 
+
+} 
+.head{
+
+  width: 8vw;
+  height: 4vw;
+  border-radius: 20%;
+  background-color: rgb(150,150,150);
+  -webkit-transform: translate(-3vw,-2vw);
+      -ms-transform: translate(-3vw,-2vw);
+          transform: translate(-3vw,-2vw);
+}
+
+.carHead:nth-child(5) {left: 22vw; -webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
+.car:nth-child(2) {  left: -11vw;}
+.car:nth-child(3) { left: 11vw;}
+
+
+ .msg{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  font-family: 'Square721 BT','Montserrat', sans-serif;
+  font-size: 20px;
+ }
+ .msg>a{
+  text-decoration: none; 
+  color: gray;
+  
+ }  
