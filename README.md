@@ -1,7 +1,7 @@
 # RunningTrainAnimation
 Running Train Animation with pure CSS
 
-![RunningTrainAnimation](src\RunningTrainAnimation.gif)
+![RunningTrainAnimation](src/RunningTrainAnimation.gif)
 
 ## see it at : https://dog1133299.github.io/RunningTrainAnimation/
 
